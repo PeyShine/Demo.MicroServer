@@ -4,5 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Com.Ctrip.Framework.Apollo.Configuration" Version="2.3.0" />
+    <PackageReference Include="Ocelot" Version="15.0.6" />
+    <PackageReference Include="Ocelot.Provider.Consul" Version="15.0.6" />
+    <PackageReference Include="Ocelot.Provider.Polly" Version="15.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+  </ItemGroup>
+
 
 </Project>

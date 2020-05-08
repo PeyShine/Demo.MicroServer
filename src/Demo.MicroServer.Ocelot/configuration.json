@@ -1,0 +1,69 @@
+{
+  "ReRoutes": [
+    //swagger
+    {
+      "DownstreamPathTemplate": "/doc/Demo.MicroServer.UserService/swagger.json",
+      "DownstreamScheme": "http",
+      "ServiceName": "Demo.MicroServer.UserService",
+      "LoadBalancer": "RoundRobin",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/doc/Demo.MicroServer.UserService/swagger.json",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "DELETE", "PUT" ],
+      "ServiceName": "Demo.MicroServer.UserService",
+      "UseServiceDiscovery": true,
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+
+      //缓存
+      "FileCacheOptions": {
+        "TtlSeconds": 10
+      },
+
+      //限流
+      "RateLimitOptions": {
+        "ClientWhitelist": [ "admin" ],
+        "EnableRateLimiting": true,
+        "Period": "5m",
+        "PeriodTimespan": 5,
+        "Limit": 10
+      },
+
+      //熔断器Polly
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 3000
+      }
+
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "userrserverkey",
+      //  "AllowedScopes": []
+      //}
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "http://127.0.0.1:8000", //网关对外地址
+    "RequestIdKey": null,
+    "ServiceDiscoveryProvider": {
+      "Host": "10.29.4.101",
+      "Port": 8500,
+      "Type": "Consul"
+    },
+
+    //限流全剧配置
+    "RateLimitOptions": {
+      "QuotaExceededMessage": "The system is busy. Please try again later.",
+      "HttpStatusCode": 1001,
+      "ClientIdHeader": "client_id"
+    }
+  }
+
+}

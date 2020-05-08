@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Demo.MicroServer.ProductService</name>
+    </assembly>
+    <members>
+        <member name="M:Demo.MicroServer.ProductService.Controllers.HealthController.check">
+            <summary>
+            健康检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.MicroServer.ProductService.Controllers.HealthController.Test(System.Int32)">
+            <summary>
+            测试Exceptionless错误收集和告警
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

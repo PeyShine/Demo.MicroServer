@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Demo.MicroServer.UserService</name>
+    </assembly>
+    <members>
+        <member name="M:Demo.MicroServer.UserService.Controllers.HealthController.check">
+            <summary>
+            健康检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.MicroServer.UserService.Controllers.HealthController.Test(System.Int32)">
+            <summary>
+            测试Exceptionless错误收集
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.MicroServer.UserService.Controllers.UserController.GetUserinfo(System.String)">
+            <summary>
+            通过id获取用户信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Demo.MicroServer.UserService.Models.products">
+            <summary>
+            商品实体
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.products.product_id">
+            <summary>
+            商品id
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.products.product_name">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.products.product_price">
+            <summary>
+            商品价格
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.products.product_description">
+            <summary>
+            商品描述
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.products.add_time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.products.update_time">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:Demo.MicroServer.UserService.Models.users">
+            <summary>
+            用户实体
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.users.user_id">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.users.user_name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.users.pass_word">
+            <summary>
+            账户密码
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.users.add_time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Models.users.update_time">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:Demo.MicroServer.UserService.Services.IUserServices">
+            <summary>
+            用户相关接口服务
+            </summary>
+        </member>
+        <member name="M:Demo.MicroServer.UserService.Services.IUserServices.GetUserByIdAsync(System.String)">
+            <summary>
+            根据用户id获取用户信息
+            </summary>
+            <param name="user_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Demo.MicroServer.UserService.Services.IUserServices.AddUserAsync(Demo.MicroServer.UserService.Models.users)">
+            <summary>
+            添加用户
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
