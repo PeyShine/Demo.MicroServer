@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="IdentityServerAuthenticationOptions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Com.Ctrip.Framework.Apollo.Configuration" Version="2.3.0" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
     <PackageReference Include="Ocelot" Version="15.0.6" />
     <PackageReference Include="Ocelot.Provider.Consul" Version="15.0.6" />
     <PackageReference Include="Ocelot.Provider.Polly" Version="15.0.6" />

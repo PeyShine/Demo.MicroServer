@@ -46,8 +46,19 @@ Exceptionless提供了两种服务方式，一种是在线的，就是直接在�
 可以看到界面多出一条发送测试的数据记录
 
 ## IdentityServer4统一鉴权中心
-之所有将认证授权放在最后，因为没有这个前面的流程也是可以跑通的，后续会将IdentityServer4集成到api 网关当中来完成统一的认证鉴权，代码完成了部分，还在完善中...
+之所有将认证授权放在最后，因为没有这个前面的流程也是可以跑通的，测试的时候如果觉得这部分测试麻烦可以先注释掉，流程跑通后再来集成这个，这个东西的用法还是很多的，这里将IdentityServer4集成到api 网关当中来完成统一的认证鉴权。
+在identityserver4项目中分别实现以下几个类
+<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/identityserver4_starup.png" width="900" height="350" /><br/>
+分类来完全几个东西：定义api资源，客户端访问资源范围，校验账户密码过程和数据返回格式
+然后在api网关中项目中统一认证，这里需要说明下为什么要将IdentityServer4集成到网关当中而不是在每个服务实例单独去认证，想象一下，如果在一个大型项目中，不同的小组维护着不同的服务实例，势必每个小组都要在各自的代码中完成一套认证逻辑，确实没有必要，
+而Ocelot天然对IdentityServer4进行了很好的集成，我们只需要在网关中统一添加认证代码即可，而各个微服务实例只需要关心各自的业务逻辑代码即可。
+这个也列举一下使用过程，在客户端没有token时通过网关对api资源进行访问，可以看到如图的返回状态码：401
+<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/401.png" width="900" height="350" /><br/>
+然后我们到IdentityServer4中请求一个token
+<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/identityserver4_token.png" width="900" height="350" /><br/>
+拿到token后，带着token再通过网关请求相同的api资源，可以看到正确拿到想要的资源。
+<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/identityserver4_bearer_token.png" width="900" height="350" /><br/>
 
 ## 特别说明
 上面的所有说明，在代码中均有体现，并开放出来，但是对于一个完整的微服务架构来说还是太简略，只是做了简单的说明，后续会具体拆开来分享一下。
-至于为什么要这么做和工具的安装，博客园等地方有很多这方面的对比和教程，这里只关注微服务架构的实现
+至于为什么要这么做和工具的安装，博客园等地方有很多这方面的对比和教程可以参考，这里着重关注微服务架构的实现

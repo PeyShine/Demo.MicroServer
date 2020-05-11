@@ -3,19 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MicroServer.Infrastructure", "src\Demo.MicroServer.Infrastructure\Demo.MicroServer.Infrastructure.csproj", "{45920F86-AA8F-4833-B7D1-7AFDD827DF87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.MicroServer.Infrastructure", "src\Demo.MicroServer.Infrastructure\Demo.MicroServer.Infrastructure.csproj", "{45920F86-AA8F-4833-B7D1-7AFDD827DF87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MicroServer.Repository", "src\Demo.MicroServer.Repository\Demo.MicroServer.Repository.csproj", "{7E82006E-2B77-4D7D-A490-FD1CECA1B173}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.MicroServer.Repository", "src\Demo.MicroServer.Repository\Demo.MicroServer.Repository.csproj", "{7E82006E-2B77-4D7D-A490-FD1CECA1B173}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MicroServer.Ocelot", "src\Demo.MicroServer.Ocelot\Demo.MicroServer.Ocelot.csproj", "{7008AFD1-7545-4722-BBDC-E3F1378E769E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.MicroServer.Ocelot", "src\Demo.MicroServer.Ocelot\Demo.MicroServer.Ocelot.csproj", "{7008AFD1-7545-4722-BBDC-E3F1378E769E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MicroServer.IdentityServer4", "src\Demo.MicroServer.IdentityServer4\Demo.MicroServer.IdentityServer4.csproj", "{F82E4208-CDE2-4DA5-A115-E567FBAFE67D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.MicroServer.IdentityServer4", "src\Demo.MicroServer.IdentityServer4\Demo.MicroServer.IdentityServer4.csproj", "{F82E4208-CDE2-4DA5-A115-E567FBAFE67D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroServer.Instance", "MicroServer.Instance", "{BF4001D5-492C-4FBC-BB33-4880249F3EFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MicroServer.UserService", "src\Demo.MicroServer.UserService\Demo.MicroServer.UserService.csproj", "{7FF10B77-F7C7-4BDF-826E-8A3629815AB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.MicroServer.UserService", "src\Demo.MicroServer.UserService\Demo.MicroServer.UserService.csproj", "{7FF10B77-F7C7-4BDF-826E-8A3629815AB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.MicroServer.ProductService", "src\Demo.MicroServer.ProductService\Demo.MicroServer.ProductService.csproj", "{C5AFC88B-D7E0-4970-BD95-34FE2113BEF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.MicroServer.ProductService", "src\Demo.MicroServer.ProductService\Demo.MicroServer.ProductService.csproj", "{C5AFC88B-D7E0-4970-BD95-34FE2113BEF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{750250E4-B09F-4875-9ED8-A3C1E555D9B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{6825F89D-6BD3-4E0D-8A97-968B61885061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTest.UserService", "test\XUnitTest.UserService\XUnitTest.UserService.csproj", "{C2EE0D46-A4FF-4E98-8928-3A053F7A3629}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,13 +53,23 @@ Global
 		{C5AFC88B-D7E0-4970-BD95-34FE2113BEF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5AFC88B-D7E0-4970-BD95-34FE2113BEF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5AFC88B-D7E0-4970-BD95-34FE2113BEF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2EE0D46-A4FF-4E98-8928-3A053F7A3629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2EE0D46-A4FF-4E98-8928-3A053F7A3629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2EE0D46-A4FF-4E98-8928-3A053F7A3629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2EE0D46-A4FF-4E98-8928-3A053F7A3629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{45920F86-AA8F-4833-B7D1-7AFDD827DF87} = {750250E4-B09F-4875-9ED8-A3C1E555D9B6}
+		{7E82006E-2B77-4D7D-A490-FD1CECA1B173} = {750250E4-B09F-4875-9ED8-A3C1E555D9B6}
+		{7008AFD1-7545-4722-BBDC-E3F1378E769E} = {750250E4-B09F-4875-9ED8-A3C1E555D9B6}
+		{F82E4208-CDE2-4DA5-A115-E567FBAFE67D} = {750250E4-B09F-4875-9ED8-A3C1E555D9B6}
+		{BF4001D5-492C-4FBC-BB33-4880249F3EFE} = {750250E4-B09F-4875-9ED8-A3C1E555D9B6}
 		{7FF10B77-F7C7-4BDF-826E-8A3629815AB9} = {BF4001D5-492C-4FBC-BB33-4880249F3EFE}
 		{C5AFC88B-D7E0-4970-BD95-34FE2113BEF0} = {BF4001D5-492C-4FBC-BB33-4880249F3EFE}
+		{C2EE0D46-A4FF-4E98-8928-3A053F7A3629} = {6825F89D-6BD3-4E0D-8A97-968B61885061}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2980E86D-065D-4E74-9E38-1B1E67DC5E24}

@@ -40,12 +40,12 @@
         "ExceptionsAllowedBeforeBreaking": 2,
         "DurationOfBreak": 5000,
         "TimeoutValue": 3000
-      }
+      },
 
-      //"AuthenticationOptions": {
-      //  "AuthenticationProviderKey": "userrserverkey",
-      //  "AllowedScopes": []
-      //}
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "userserverkey",
+        "AllowedScopes": []
+      }
     }
   ],
 

@@ -41,7 +41,7 @@ namespace Demo.MicroServer.IdentityServer4
         public static IEnumerable<Client> Clients =>
             new List<Client>
             {
-                //客户端
+                //客户端模式
                 new Client
                 {
                     ClientId="Web.Client",
@@ -50,12 +50,12 @@ namespace Demo.MicroServer.IdentityServer4
                     AllowedGrantTypes=GrantTypes.ClientCredentials,
                     AccessTokenLifetime=3600*8,    //token过期时间设置为8小时
                     //允许访问api的范围
-                    AllowedScopes = new [] { "UserService", "UserService",
+                    AllowedScopes = new [] { "UserService", "ProductService",
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile },
                     AllowOfflineAccess=true
                 },
-                //管理后台
+                //密码模式
                 new Client
                 {
                     ClientId="Web.Manager",

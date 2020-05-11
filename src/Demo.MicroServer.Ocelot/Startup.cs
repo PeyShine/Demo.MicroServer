@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -29,28 +30,19 @@ namespace Demo.MicroServer.Ocelot
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            ////IdentityService4
-            //Action<IdentityServerAuthenticationOptions> isaOptClient = option =>
-            //{
-            //    option.Authority = Configuration["IdentityService4.Uri"];
-            //    option.ApiName = "UserService";
-            //    option.RequireHttpsMetadata = Convert.ToBoolean(Configuration["IdentityService4.UseHttps"]);
-            //    option.SupportedTokens = SupportedTokens.Both;
-            //    //option.ApiSecret = Configuration["IdentityService4:ApiSecrets:DesignerService"];
-            //};
+            //IdentityService4
+            Action<IdentityServerAuthenticationOptions> isaOptClient = option =>
+            {
+                option.Authority = Configuration["IdentityService4.Uri"];
+                option.ApiName = "UserService";
+                option.RequireHttpsMetadata = Convert.ToBoolean(Configuration["IdentityService4.UseHttps"]);
+                option.SupportedTokens = SupportedTokens.Both;
+                //option.ApiSecret = Configuration["IdentityService4:ApiSecrets:DesignerService"];
+            };
 
-            ////Action<IdentityServerAuthenticationOptions> isaOptProduct = option =>
-            ////{
-            ////    option.Authority = Configuration["IdentityService4:Uri"];
-            ////    option.ApiName = "ProductService";
-            ////    option.RequireHttpsMetadata = Convert.ToBoolean(Configuration["IdentityService4:UseHttps"]);
-            ////    option.SupportedTokens = SupportedTokens.Both;
-            ////    option.ApiSecret = Configuration["IdentityService4:ApiSecrets:productservice"];
-            ////};
-
-            //services.AddAuthentication()
-            //    .AddIdentityServerAuthentication("designerserverkey", isaOptClient);
-            ////.AddIdentityServerAuthentication("ProductServiceKey", isaOptProduct);
+            services.AddAuthentication()
+                .AddIdentityServerAuthentication("userserverkey", isaOptClient);
+            //.AddIdentityServerAuthentication("ProductServiceKey", isaOptProduct);
 
             //Ocelot
             services.AddOcelot()
