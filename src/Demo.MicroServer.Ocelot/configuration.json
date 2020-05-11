@@ -21,10 +21,10 @@
         "Type": "RoundRobin"
       },
 
-      //»º´æ
-      "FileCacheOptions": {
-        "TtlSeconds": 10
-      },
+      ////»º´æ
+      //"FileCacheOptions": {
+      //  "TtlSeconds": 10
+      //},
 
       //ÏÞÁ÷
       "RateLimitOptions": {

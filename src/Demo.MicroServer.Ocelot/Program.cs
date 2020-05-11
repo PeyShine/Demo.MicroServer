@@ -22,11 +22,13 @@ namespace Demo.MicroServer.Ocelot
                 .ConfigureAppConfiguration((hostingContext, builder) =>
                 {
                     builder
+                    .AddJsonFile("configuration.json", false, true)
                     .AddApollo(builder.Build().GetSection("apollo"))
                     .AddDefault();
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("http://127.0.0.1:8000");
                     webBuilder.UseStartup<Startup>();
                 });
     }
