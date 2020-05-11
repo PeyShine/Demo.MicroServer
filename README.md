@@ -25,10 +25,10 @@ Swagger提供了一个可视化的UI页面展示描述文件。接口的调用�
 ##Ocelot 网关
 Ocelot是一个.NET API网关，它提供了路由,请求聚合,服务发现、鉴权、限流熔断、负载均衡器等一系列强大的功能，而这些功能只需要在配置文件中完成即可使用.
 比如上面的swagger，我们在三个服务实例的端口打开都可以看到api相关文档信息，但是我们能否在api网关中直接集成呢，答案是肯定的，这依赖于ocelot强大的路由功能，如图，简单的几行配置，我们便将swagger配置到了网关当中
-<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/ocelot_config_swagger.png" width="900" height="350" /><br/>
+<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/ocelot_config_swagger.png" width="900" height="250" /><br/>
 
 网关内置的负载均衡器使用来一泼，如图我在网关中对同一个接口进行了三次调用，可以看到结果分别来自三个不同的端口中，因为我选用了负载均衡器中的轮询策略
-<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/ocelot_LoadBalancer_6891.png" width="900" height="350" /><br/>
-<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/ocelot_LoadBalancer_6892.png" width="900" height="350" /><br/>
-<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/ocelot_LoadBalancer_6893.png" width="900" height="350" /><br/>
+<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/ocelot_LoadBalancer_6891.png" width="900" height="150" /><br/>
+<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/ocelot_LoadBalancer_6892.png" width="900" height="150" /><br/>
+<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/ocelot_LoadBalancer_6893.png" width="900" height="150" /><br/>
 
