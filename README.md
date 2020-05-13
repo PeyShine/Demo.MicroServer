@@ -1,5 +1,5 @@
 
-# 集成.NETCore+Swagger+Consul+Polly+Ocelot+IdentityServer4+Exceptionless+Apollo的微服务开发框架
+# 集成.NET Core+Swagger+Consul+Polly+Ocelot+IdentityServer4+Exceptionless+Apollo的微服务开发框架
 
 ## Github源代码地址
 https://github.com/PeyShine/Demo.MicroServer
