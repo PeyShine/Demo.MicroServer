@@ -1,3 +1,4 @@
+using Demo.MicroServer.Repository.Mongo;
 using Demo.MicroServer.UserService.Models;
 using Demo.MicroServer.UserService.Repositories;
 using Demo.MicroServer.UserService.Services;
@@ -27,9 +28,9 @@ namespace Demo.MicroServer.UserService
         {
             services.AddControllers();
             services.AddTransient<DemoMicroServerContext>();
-            services.AddTransient(typeof(IDemoMicroServerRepository<>), typeof(DemoMicroServerRepository<>));
-
+            services.AddTransient(typeof(IDemoMicroServerRepository<>), typeof(DemoMicroServerRepository<>));            
             services.AddTransient<IUserServices, UserServices>();
+            services.AddTransient(typeof(IMongoService), typeof(MongoService));
 
             // Ìí¼Ó Swagger
             services.AddSwaggerGen(s =>
@@ -85,7 +86,7 @@ namespace Demo.MicroServer.UserService
                 endpoints.MapControllers();
             });
             
-            app.UseConsul(Configuration);
+            //app.UseConsul(Configuration);
         }
     }
 }

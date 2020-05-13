@@ -24,6 +24,37 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Demo.MicroServer.UserService.Controllers.UserController.GetMongoUserCount">
+            <summary>
+            测试从mongodb中获取用户数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Demo.MicroServer.UserService.Controllers.UserController.user_mongo">
+            <summary>
+            临时测试mongo用户实体
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Controllers.UserController.user_mongo.user_name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Controllers.UserController.user_mongo.pass_word">
+            <summary>
+            账户密码
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Controllers.UserController.user_mongo.add_time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Demo.MicroServer.UserService.Controllers.UserController.user_mongo.update_time">
+            <summary>
+            更新时间
+            </summary>
+        </member>
         <member name="T:Demo.MicroServer.UserService.Models.products">
             <summary>
             商品实体
