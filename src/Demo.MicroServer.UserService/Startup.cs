@@ -86,7 +86,7 @@ namespace Demo.MicroServer.UserService
                 endpoints.MapControllers();
             });
             
-            //app.UseConsul(Configuration);
+            app.UseConsul(Configuration);
         }
     }
 }
