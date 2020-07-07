@@ -67,11 +67,11 @@ Exceptionless提供了两种服务方式，一种是在线的，就是直接在�
 至于为什么要这么做和工具的安装，博客园等地方有很多这方面的对比和教程可以参考，这里着重关注微服务架构的实现<br/>
 欢迎大家提出宝贵意见，当然如果对你有帮助也欢迎star.<br/>
 随时随地查阅可关注公众号<br/>
-<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/qrcode.jpg" width="250" height="250" /><br/>
+<img src="https://raw.githubusercontent.com/PeyShine/Demo.MicroServer/master/doc/images/qrcode.jpg"/><br/>
 
 
 ## 后续更新
 后续可能还会加入CAP和APM(已加入)
 
-## 关于运行
+## 关于运行(更新于2020/07/07)
 为了说明运行流程，单独更新了一篇文章用来介绍，可以点击查看：[微服务框架Demo.MicroServer运行手册](http://liuthing.com/2020/07/06/demomicroserver-use/)
