@@ -10,6 +10,7 @@
       "UpstreamPathTemplate": "/doc/Demo.MicroServer.UserService/swagger.json",
       "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ]
     },
+    //UserService
     {
       "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "http",

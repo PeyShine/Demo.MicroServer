@@ -71,4 +71,7 @@ Exceptionless提供了两种服务方式，一种是在线的，就是直接在�
 
 
 ## 后续更新
-后续可能还会加入CAP和APM
+后续可能还会加入CAP和APM(已加入)
+
+## 关于运行
+为了说明运行流程，单独更新了一篇文章用来介绍，可以点击查看：[微服务框架Demo.MicroServer运行手册](http://liuthing.com/2020/07/06/demomicroserver-use/)
